@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkWindow" id="main_window">
+    <property name="title">Formulaire d'Inscription</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkEntry" id="nom">
+            <property name="placeholder-text">Nom </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="prenom">
+            <property name="placeholder-text">Prénom </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="birthday">
+            <property name="placeholder-text">Date de naissance </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="email">
+            <property name="placeholder-text">Email</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="numero_telephone">
+            <property name="placeholder-text">Numéro de téléphone</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkEntry" id="password">
+            <property name="placeholder-text">Mot de passe</property>
+            <property name="visibility">false</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="register_button">
+            <property name="label">S'inscrire</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
