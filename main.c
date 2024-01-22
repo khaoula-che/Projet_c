@@ -47,7 +47,8 @@ void success(PGconn *db, const char *email, const char *type) {
         int id_medecin;
         get_medecin(db, &nom, &prenom, &id_medecin, email);
         medecin_page(db, email);
-    } else if (strcmp(type, "Patient") == 0) {
+    }
+    if (strcmp(type, "Patient") == 0) {
         display_patient_page(db, email);
     } else {
         fprintf(stderr, "Type d'utilisateur non reconnu : %s\n", type);
@@ -158,23 +159,23 @@ void login_user() {
 
     // Ajout d'un espace entre le label et les champs de saisie
     GtkWidget *spacing_label = gtk_label_new(NULL);
-    gtk_widget_set_size_request(spacing_label, -1, 20); // Ajustez la taille de l'espace selon vos besoins
+    gtk_widget_set_size_request(spacing_label, -1, 20);
     gtk_grid_attach(GTK_GRID(grid), spacing_label, 0, 1, 1, 1);
 
     email_login = gtk_entry_new();
     gtk_entry_set_placeholder_text(GTK_ENTRY(email_login), "Email");
     gtk_widget_set_size_request(email_login, 250, 30);
-    gtk_grid_attach(GTK_GRID(grid), email_login, 0, 2, 1, 1); // Notez le changement d'index de grille
+    gtk_grid_attach(GTK_GRID(grid), email_login, 0, 2, 1, 1);
 
     password_login = gtk_entry_new();
     gtk_entry_set_placeholder_text(GTK_ENTRY(password_login), "Mot de passe");
     gtk_entry_set_visibility(GTK_ENTRY(password_login), FALSE);
     gtk_widget_set_size_request(password_login, 250, 30);
-    gtk_grid_attach(GTK_GRID(grid), password_login, 0, 3, 1, 1); // Changement d'index
+    gtk_grid_attach(GTK_GRID(grid), password_login, 0, 3, 1, 1);
 
     login_button = gtk_button_new_with_label("Se connecter");
     gtk_widget_set_size_request(login_button, 250, 30);
-    gtk_grid_attach(GTK_GRID(grid), login_button, 0, 4, 1, 1); // Changement d'index
+    gtk_grid_attach(GTK_GRID(grid), login_button, 0, 4, 1, 1);
     g_signal_connect(login_button, "clicked", G_CALLBACK(login_click), NULL);
 
     gtk_stack_add_named(GTK_STACK(stack), login_box, "login");
