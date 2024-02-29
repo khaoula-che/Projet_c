@@ -1,7 +1,7 @@
 /*
     SeniorCare
     Created by : MOUGNI Asma
-    Description : Interface patient dans laquelle se fait la prise de rendez-vous, la consultation des rendez-vous, et bien d'autres fonctionnalités.
+    Description : Interface patient dans laquelle se fait la prise de rendez-vous, la consultation des rendez-vous, et bien d'autres fonctionnalitées.
 */
 // En-têtes système
 #include <stdio.h>
