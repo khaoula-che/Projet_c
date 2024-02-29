@@ -237,7 +237,7 @@ void register_user() {
     g_signal_connect(type_combobox, "changed", G_CALLBACK(type_combobox_change), "register");
 }
 
-// Fonction pour afficher le menu
+// Fonction affichant le menu
 void switch_to_login(GtkButton *button, gpointer stack) {
     gtk_stack_set_visible_child_name(GTK_STACK(stack), "login");
 }
